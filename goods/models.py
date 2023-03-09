@@ -7,6 +7,9 @@ class Category(models.Model):
     def __str__(self):
         return f'{self.name}'
 
+    class Meta:
+        verbose_name_plural = 'categories'
+
 
 class Goods(models.Model):
     nameGoods = models.CharField(max_length=100)
