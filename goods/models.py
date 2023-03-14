@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=30, null=True)
+    categoryName = models.CharField(max_length=30, null=True)
 
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.id}. {self.categoryName}'
 
     class Meta:
         verbose_name_plural = 'categories'
@@ -15,9 +15,9 @@ class Goods(models.Model):
     nameGoods = models.CharField(max_length=100)
     compositionOfGoods = models.TextField()
     weightGoods = models.CharField(max_length=10)
+    favoriteGoods = models.BooleanField(default=False)
     pathImage = models.TextField(null=True)
     priceGoods = models.IntegerField()
-    favoriteGoods = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):

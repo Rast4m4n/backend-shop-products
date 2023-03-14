@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 # Нужно менять порт каждый раз, когда компилю магазин продуктов
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:52922",
+    "http://localhost:3000",
 ]
 
 

@@ -4,11 +4,10 @@ from .models import *
 
 class GoodsAdmin(admin.ModelAdmin):
     search_fields = ('id', 'nameGoods', 'priceGoods', 'category')
-    list_filter = ('favoriteGoods',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_filter = ('id', 'name',)
+    list_filter = ('id', 'categoryName',)
 
 
 class UserAdmin(admin.ModelAdmin):
